@@ -26,5 +26,6 @@ public class ArrayListFunHouseRunner {
 
         System.out.println(list);
         ArrayListFunHouse.keepOnlyCompositeNumbers(list);
+        System.out.println(list);
     }
 }
