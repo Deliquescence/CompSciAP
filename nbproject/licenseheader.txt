@@ -1,0 +1,8 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Creative Commons Attribution-NonCommercial
+${licensePrefix}https://creativecommons.org/licenses/by-nc/4.0/
+<#if licenseLast??>
+${licenseLast}
+</#if>
