@@ -17,7 +17,10 @@ public class ExpressionSolver {
 
     }
 
-    public void solve() {
+    public static void solve(String s) {
+        s = s.trim();
+        if (s.contains("*") || s.contains("/")) {
 
+        }
     }
 }
