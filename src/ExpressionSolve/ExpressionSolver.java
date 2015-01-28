@@ -5,7 +5,6 @@
 package ExpressionSolve;
 
 /**
- *
  * @author Josh Baird
  */
 public class ExpressionSolver {
