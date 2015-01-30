@@ -74,7 +74,9 @@ public class ExpressionSolver {
             int plusPos = s.indexOf("+");
             int minusPos = s.indexOf("-");
 
-            if (plusPos == -1) {
+            if (minusPos == 0) {
+                break;
+            } else if (plusPos == -1) {
                 firstOperation = "-";
             } else if (minusPos == -1) {
                 firstOperation = "+";
