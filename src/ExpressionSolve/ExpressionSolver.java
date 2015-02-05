@@ -9,14 +9,6 @@ package ExpressionSolve;
  */
 public class ExpressionSolver {
 
-    public ExpressionSolver(String s) {
-
-    }
-
-    public void setExpression(String s) {
-
-    }
-
     public static void solve(String s) {
         s = s.trim();
         String exp = s;
@@ -70,7 +62,7 @@ public class ExpressionSolver {
                 s = s.replace(temp, val.toString());
             }
         }
-        while (s.contains("+") || s.contains("-")) {//contains '-' for negative number
+        while (s.contains("+") || s.contains("-")) {
             int plusPos = s.indexOf("+");
             int minusPos = s.indexOf("-");
 
