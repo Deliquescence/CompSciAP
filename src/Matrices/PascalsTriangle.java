@@ -22,7 +22,7 @@ public class PascalsTriangle {
         return b;
     }
 
-    public static int[][] getRows(int n) {
+    private static int[][] getRows(int n) {
         int[][] triangle = new int[n][];
         for (int r = 0; r < n; r++) {
             int[] row = new int[r + 1];
@@ -34,7 +34,7 @@ public class PascalsTriangle {
         return triangle;
     }
 
-    public static void niceOutput(int[][] tri) {
+    private static void niceOutput(int[][] tri) {
         for (int r = 0; r < tri.length; r++) {
             int spaces = (tri.length - 1) - (r);
             for (int s = 0; s < spaces; s++) {
@@ -48,8 +48,8 @@ public class PascalsTriangle {
         }
     }
 
-    public static void main(String[] args) {
-        //System.out.println(Arrays.deepToString(getRows(7)));
-        niceOutput(getRows(10));
+    public static void printTriangleOfSize(int n) {
+        System.out.println("Triangle of Size " + n + ":");
+        niceOutput(getRows(n));
     }
 }
