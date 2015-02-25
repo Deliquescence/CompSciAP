@@ -20,7 +20,6 @@ public class MatrixSumming {
 
     public static int sumAround(int x, int y) {
         int sum = 0;
-        //y = providedMatrix.length - y;
 
         try {
             sum += (providedMatrix[x - 1][y - 1]); //Upper Left
