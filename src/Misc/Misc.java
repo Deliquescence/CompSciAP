@@ -4,6 +4,8 @@
  */
 package Misc;
 
+import Interfaces.J;
+import Interfaces.K;
 import java.util.List;
 
 /**
@@ -15,7 +17,11 @@ public class Misc {
     public static void main(String[] args) {
         replaceAll(0, 1);
 
-
+        J one = new J();
+        System.out.println(one);
+        one = new K();
+        one.fun();
+        System.out.println(one);
         /* int[] a = {1, 2, 3};
          * int[] b = {1, 2, 3};
          *
