@@ -30,20 +30,27 @@ public class Card implements Comparable<Card> {
         "King"
     };
 
-    private String suit;
+    private Suit suit;
     private int face;
 
     /**
      * @return the suit
      */
-    public String getSuit() {
+    public Suit getSuit() {
         return suit;
+    }
+
+    /**
+     * @return the suit string
+     */
+    public String getSuitString() {
+        return suit.toString();
     }
 
     /**
      * @param suit the suit to set
      */
-    public void setSuit(String suit) {
+    public void setSuit(Suit suit) {
         this.suit = suit;
     }
 
@@ -68,7 +75,7 @@ public class Card implements Comparable<Card> {
         this.face = face;
     }
 
-    public Card(String rank, String suit) {
+    public Card(String rank, Suit suit) {
         for (int i = 1; i < FACES.length; i++) {
             if (FACES[i].equalsIgnoreCase(rank)) {
                 this.face = i;
@@ -82,7 +89,7 @@ public class Card implements Comparable<Card> {
 
     @Override
     public String toString() {
-        return getFaceString() + " of " + suit;
+        return getFaceString() + " of " + getSuitString();
     }
 
     @Override
