@@ -34,14 +34,14 @@ public class Card implements Comparable<Card> {
     private int face;
 
     /**
-     * @return the suit
+     * @return the suit of the card
      */
     public Suit getSuit() {
         return suit;
     }
 
     /**
-     * @return the suit string
+     * @return the friendly suit string
      */
     public String getSuitString() {
         return suit.toString();
@@ -55,26 +55,32 @@ public class Card implements Comparable<Card> {
     }
 
     /**
-     * @return the face
+     * @return the face (rank) of this card
      */
     public int getFace() {
         return face;
     }
 
     /**
-     * @return the face string (name)
+     * @return the friendly name of this card
      */
     public String getFaceString() {
         return FACES[face];
     }
 
     /**
-     * @param face the face to set
+     * @param face the face (rank) to set
      */
     public void setFace(int face) {
         this.face = face;
     }
 
+    /**
+     * Create a new card
+     *
+     * @param rank The rank/face of the card
+     * @param suit The suit of the card
+     */
     public Card(String rank, Suit suit) {
         for (int i = 1; i < FACES.length; i++) {
             if (FACES[i].equalsIgnoreCase(rank)) {
