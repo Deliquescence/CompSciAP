@@ -22,7 +22,22 @@ public class CardRunner {
         ss.add(new BlackJackCard("ace", Suit.Spade));
 
         for (Card c : ss) {
-            System.out.println(c);
+            // System.out.println(c);
+        }
+
+        Deck mydeck = new Deck(ss);
+        /* System.out.println(mydeck.deal());
+         * System.out.println(mydeck.deal());
+         * System.out.println(mydeck.deal());
+         * System.out.println(mydeck.deal());
+         * System.out.println(mydeck.deal());
+         * System.out.println(mydeck.deal()); */
+        //System.out.println(mydeck.size());
+
+        mydeck.shuffle();
+        while (!mydeck.isEmpty()) {
+            System.out.println(mydeck.deal());
+            //System.out.println(mydeck.size());
         }
     }
 }
