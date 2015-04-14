@@ -31,7 +31,7 @@ public class Card implements Comparable<Card> {
     };
 
     private Suit suit;
-    private int face;
+    private int rank;
 
     /**
      * @return the suit of the card
@@ -55,39 +55,39 @@ public class Card implements Comparable<Card> {
     }
 
     /**
-     * @return the face (rank) of this card
+     * @return the rank of this card
      */
-    public int getFace() {
-        return face;
+    public int getRank() {
+        return rank;
     }
 
     /**
      * @return the friendly name of this card
      */
-    public String getFaceString() {
-        return FACES[face];
+    public String getRankString() {
+        return FACES[rank];
     }
 
     /**
-     * @param face the face (rank) to set
+     * @param rank the rank (rank) to set
      */
-    public void setFace(int face) {
-        this.face = face;
+    public void setRank(int rank) {
+        this.rank = rank;
     }
 
     /**
      * Create a new card
      *
-     * @param rank The rank/face of the card
+     * @param rank The rank/rank of the card
      * @param suit The suit of the card
      */
     public Card(String rank, Suit suit) {
         for (int i = 1; i < FACES.length; i++) {
             if (FACES[i].equalsIgnoreCase(rank)) {
-                this.face = i;
+                this.rank = i;
             }
         }
-        if (this.face == 0) {
+        if (this.rank == 0) {
             throw new IllegalArgumentException("Face was not a valid card");
         }
         this.suit = suit;
@@ -95,15 +95,15 @@ public class Card implements Comparable<Card> {
 
     @Override
     public String toString() {
-        return getFaceString() + " of " + getSuitString();
+        return getRankString() + " of " + getSuitString();
     }
 
     @Override
     public int compareTo(Card o) {
-        if (o.getFace() == this.getFace() && o.getSuit().equals(this.getSuit())) {
+        if (o.getRank() == this.getRank() && o.getSuit().equals(this.getSuit())) {
             return 0;
         } else {
-            return (this.getFace() - o.getFace());
+            return (this.getRank() - o.getRank());
         }
     }
 }

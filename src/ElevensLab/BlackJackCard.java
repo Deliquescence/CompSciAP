@@ -20,12 +20,12 @@ public class BlackJackCard extends Card {
      * @return The point value
      */
     public int getValue() {
-        if (this.getFace() == 1) { //Ace
+        if (this.getRank() == 1) { //Ace
             return 11;
-        } else if (this.getFace() >= 10) { //Faces and 10
+        } else if (this.getRank() >= 10) { //Faces and 10
             return 10;
         } else { //Numbers
-            return this.getFace();
+            return this.getRank();
         }
     }
 
